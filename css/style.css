@@ -114,3 +114,6 @@ header.header {
 .list-item:hover {
   box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
 }
+  ::-webkit-scrollbar {
+    display:none;
+  }
