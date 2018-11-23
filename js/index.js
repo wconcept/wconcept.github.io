@@ -1,17 +1,18 @@
 var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var Header = function Header(props) {return (
     React.createElement("header", { className: "header" },
       React.createElement("div", { className: "header-logo" },
-        React.createElement("span", null, "Job Board"),
-                          
-        React.createElement("span", null, "The front-end design and development"))));};
+        React.createElement("span", null, "Eva"),
+        React.createElement("span", null, "поиск подрядчиков в сфере event"))));};
 
 
 
 
 var Item = function Item(props) {return (
-    React.createElement("a", { className: "list-item", id: props.id, href: props.link, target: "_blank" },
-      React.createElement("div", { className: "list-item__label" }, props.label),
+  React.createElement("a", { className: "list-item", id: props.id, href: props.link, target: "_blank" },
+  // React.createElement("img", { className: "list-item__bg", id: props.id, src: props.bg }, ),
+    React.createElement("div", { className: "list-item__label" }, props.label),
       React.createElement("div", { className: "list-item__location" }, props.location),
+      React.createElement("img", { className: "list-item__bg", id: props.id, src: props.bg,style: {color: "red", backgroundColor: "blue"} }, ),
       React.createElement("div", { className: "list-item__company" }, props.company),
       React.createElement("div", { className: "list-item__title" }, props.title),
       React.createElement("div", { className: "list-item__desc" }, props.desc)));};var
@@ -38,6 +39,7 @@ List = function (_React$Component) {_inherits(List, _React$Component);function L
             link: item.url,
             label: item.term,
             location: address,
+            bg: item.bg,
             company: item.company_name,
             title: item.title,
             desc: desc }));
