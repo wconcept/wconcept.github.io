@@ -67,7 +67,7 @@ App = function (_React$Component2) {_inherits(App, _React$Component2);
     } }, { key: "componentDidMount", value: function componentDidMount()
 
     {var _this3 = this;
-      axios.get('https://codepen.io/jobs.json').
+      axios.get('https://i-experience.github.io/posts.json').
       then(function (response) {
         _this3.setState({
           jobs: response.data.jobs });
