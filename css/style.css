@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto+Slab:400,700");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  color: #292E30;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 6.875rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFB506;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+}
+.header-logo {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.header-logo span {
+  display: block;
+}
+.header-logo span:first-child {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.header-logo span:last-child {
+  color: rgba(251, 251, 251, 0.64);
+  font-weight: 300;
+}
+header.header {
+  display: none;
+}
+.list {
+  -webkit-column-count: 4;
+          column-count: 4;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .list {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+@media screen and (max-width: 900px) {
+  .list {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+.list-item {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  transition: .32s;
+}
+.list-item__label {
+  display: inline-block;
+  padding: 4px 8px;
+  color: #FFB506;
+  font-weight: 300;
+  border: 1px solid #FFB506;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+}
+.list-item__location {
+  margin-bottom: 6rem;
+  font-size: .875rem;
+}
+.list-item__company {
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: #FFB506;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+.list-item__title {
+  font-size: .875rem;
+  margin-bottom: .5rem;
+}
+.list-item__desc {
+  font-size: .75rem;
+  color: #BABABA;
+}
+.list-item:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
+}

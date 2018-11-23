@@ -1,0 +1,82 @@
+const Header = (props) => (
+  <header className="header">
+    <div className="header-logo">
+      <span>Job Board</span>
+      <span>The front-end design and development</span>
+    </div>
+  </header>
+)
+
+const Item = (props) => (
+  <a className="list-item" id={props.id} href={props.link} target="_blank">
+    <div className="list-item__label">{props.label}</div>
+    <div className="list-item__location">{props.location}</div>
+    <div className="list-item__company">{props.company}</div>
+    <div className="list-item__title">{props.title}</div>
+    <div className="list-item__desc">{props.desc}</div>
+  </a>
+)
+
+class List extends React.Component {
+  render() {
+    if (this.props.jobs == undefined) {
+      return false
+    }
+    let card = this.props.jobs.map((item, index) => {
+      let location = item.address,
+          address = null,
+          desc = String(item.description).substring(0, 120) + ' ...'
+      if (location == null) {
+        address = 'Location not specified'
+      } else {
+        address = location.city + ', ' + location.country
+      }
+      return (
+        <Item
+          id={index}
+          link={item.url}
+          label={item.term}
+          location={address}
+          company={item.company_name}
+          title={item.title}
+          desc={desc} />
+      )
+    })
+    return (
+      <div className="list">
+        {card}
+      </div>
+    )
+  }
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  
+  render() {
+    return (
+      <div className="container">
+        <Header />
+        <List jobs={this.state.jobs} />
+      </div>
+    )
+  }
+  
+  componentDidMount() {
+    axios.get('https://codepen.io/jobs.json')
+     .then(response => {
+       this.setState({
+         jobs: response.data.jobs
+       })
+      console.log(response)
+     })
+     .catch(error => {
+       console.log(error)
+     })
+  }
+}
+
+ReactDOM.render(<App/>, document.querySelector('.app'))
