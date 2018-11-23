@@ -2,6 +2,7 @@ var _createClass = function () {function defineProperties(target, props) {for (v
     React.createElement("header", { className: "header" },
       React.createElement("div", { className: "header-logo" },
         React.createElement("span", null, "Job Board"),
+                          
         React.createElement("span", null, "The front-end design and development"))));};
 
 
