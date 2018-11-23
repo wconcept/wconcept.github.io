@@ -27,6 +27,9 @@ html, body {
 .header-logo span {
   display: block;
 }
+.list-item__bg{
+max-width: 100%;
+}
 .header-logo span:first-child {
   color: #fff;
   font-size: 1.5rem;
