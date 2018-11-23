@@ -5,8 +5,6 @@ var _createClass = function () {function defineProperties(target, props) {for (v
         React.createElement("span", null, "поиск подрядчиков в сфере event"))));};
 
 
-
-
 var Item = function Item(props) {return (
   React.createElement("a", { className: "list-item", id: props.id, href: props.link, target: "_blank" },
   // React.createElement("img", { className: "list-item__bg", id: props.id, src: props.bg }, ),
